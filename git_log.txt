@@ -1,3 +1,6 @@
+7f151d9 Did problem3
+44a11e8 Completed and Tested Problem2
+48b1801 Add git history
 17e4a50 Created hello_git pyhton file
 f5200de MY info
 e423bfb Changement des infos
