@@ -14,11 +14,15 @@ def get_numbers_from_user():
     numbers = []
 
     while True:
-        # TODO: Get input from user
-        # TODO: Check if user typed 'done'
-        # TODO: Try to convert to float and add to list
-        # TODO: Handle invalid input gracefully
-        pass
+        user_input = input("Enter a number (or type 'done' to finish): ")
+        if user_input.lower() == "done":
+            break
+
+        try:
+            number = float(user_input)
+            numbers.append(number)
+        except ValueError:
+            print("Invalid input. Enter a valid number OR 'done'.")
 
     return numbers
 
@@ -42,16 +46,32 @@ def analyze_numbers(numbers):
     """
     if not numbers:
         return None
+    
+    count = len(numbers)
+    total = sum(numbers)
+    average = total / count
+    minimum = min(numbers)
+    maximum = max(numbers)
 
-    analysis = {}
+    even_count = 0
+    odd_count = 0
 
-    # TODO: Calculate count
-    # TODO: Calculate sum
-    # TODO: Calculate average
-    # TODO: Find minimum
-    # TODO: Find maximum
-    # TODO: Count even numbers (hint: use modulo operator)
-    # TODO: Count odd numbers
+    for num in numbers:
+        if num.is_integer():
+            if int(num) % 2 == 0:
+                even_count += 1
+            else:
+                odd_count += 1
+
+    analysis = {
+        "count" : count,
+        "total" : total,
+        "average" : average,
+        "minimum" : minimum,
+        "maximum" : maximum,
+        "even_count" : even_count,
+        "odd_count" : odd_count,
+    }
 
     return analysis
 
@@ -75,7 +95,13 @@ def display_analysis(analysis):
     # Sum: 25
     # Average: 5.00
     # etc.
-    pass
+    print(f"Count :      {analysis["count"]}")
+    print(f"Total :      {analysis["total"]}")
+    print(f"Average :    {analysis["average"]:.2f}")
+    print(f"Minimum:     {analysis['minimum']:.2f}")
+    print(f"Maximum:     {analysis['maximum']:.2f}")
+    print(f"Even count:  {analysis['even_count']}")
+    print(f"Odd count:   {analysis['odd_count']}")
 
 
 def main():
