@@ -1,1 +1,1 @@
-print("Hello my name is Loris and I love programming so much")
+print("Hello my name is Loris Bertschi and I love programming so much")
