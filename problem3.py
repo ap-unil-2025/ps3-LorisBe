@@ -65,7 +65,7 @@ def analyze_numbers(numbers):
 
     analysis = {
         "count" : count,
-        "sum" : sum,
+        "sum" : total,
         "average" : average,
         "minimum" : minimum,
         "maximum" : maximum,
@@ -95,9 +95,9 @@ def display_analysis(analysis):
     # Sum: 25
     # Average: 5.00
     # etc.
-    print(f"Count :      {analysis["count"]}")
-    print(f"Sum :      {analysis["total"]}")
-    print(f"Average :    {analysis["average"]:.2f}")
+    print(f"Count :      {analysis['count']}")
+    print(f"Sum :        {analysis['sum']}")
+    print(f"Average :    {analysis['average']:.2f}")
     print(f"Minimum:     {analysis['minimum']:.2f}")
     print(f"Maximum:     {analysis['maximum']:.2f}")
     print(f"Even count:  {analysis['even_count']}")
