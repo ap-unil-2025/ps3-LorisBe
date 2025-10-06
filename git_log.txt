@@ -1,3 +1,6 @@
+9b69edc Hope to have fix the sum issue
+279a261 fixed sum
+38915ef Add git history
 7f151d9 Did problem3
 44a11e8 Completed and Tested Problem2
 48b1801 Add git history
