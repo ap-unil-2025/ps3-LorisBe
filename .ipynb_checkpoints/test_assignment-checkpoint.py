@@ -92,7 +92,7 @@ def test_file_operations():
     line_count = count_lines("test_file.txt")
 
     assert word_count > 0
-    assert line_count == 13  # Sample file has 4 lines
+    assert line_count == 4  # Sample file has 4 lines
 
     # Cleanup
     os.remove("test_file.txt")
