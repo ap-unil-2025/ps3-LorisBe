@@ -4,7 +4,12 @@ Process text files and perform various analyses.
 """
 
 def create_sample_file(filename="sample.txt"):
+    """
+    Create a sample text file for testing.
 
+    Args:
+        filename (str): Name of the file to create
+    """
     content = """Python is a powerful programming language.
 It is widely used in web development, data science, and automation.
 Python's simple syntax makes it great for beginners.
